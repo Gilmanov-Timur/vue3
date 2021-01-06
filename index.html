@@ -20,6 +20,7 @@
 				<li
 					:class="['steps-item', {active: index === activeIndex, done: index < activeIndex}]"
 					v-for="(step, index) in steps"
+					:key="step.title"
 				>
 					<span @click="setActive(index)">{{ index + 1 }}</span>
 					{{ step.title }}
